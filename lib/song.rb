@@ -15,17 +15,22 @@ class Song
 
   @@songs = []
 
-  def initialize
-    @@songs << self
+  def artist=(artist)
+    @artist = artist
   end
-
-  # def self.find_by_name(name)
-  #   @@songs.detect{|a| a.name == name}
-  # end
 
   def self.all
     @@songs
   end
+
+#ALL THE CODE BELOW WAS MOVED TO MODULES 
+  # def self.find_by_name(name)
+  #   @@songs.detect{|a| a.name == name}
+  # end
+
+  # def initialize
+  #   @@songs << self
+  # end
 
   # def self.reset_all
   #   self.all.clear
@@ -34,10 +39,6 @@ class Song
   # def self.count
   #   self.all.count
   # end
-
-  def artist=(artist)
-    @artist = artist
-  end
 
   # def to_param
   #   name.downcase.gsub(' ', '-')
