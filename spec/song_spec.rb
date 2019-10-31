@@ -21,12 +21,6 @@ describe Song do
     expect(song.to_param).to eq("jump-around")
   end
 
-  it "has an artist" do
-    song.artist = Artist.new.tap {|a| a.name = "miley"}
-    expect(song.artist).to be_a(Artist)
-    expect(song.artist.name).to eq("miley")
-  end
-
   describe "Class methods" do
     it "keeps track of the songs that have been created" do
       expect(Song.all).to include(song)

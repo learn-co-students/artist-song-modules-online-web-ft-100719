@@ -27,18 +27,7 @@ describe Artist do
   end
 
   describe "Class methods" do
-    it "keeps track of the artists that have been created" do
-      expect(Artist.all).to include(artist)
-    end
-
-    it "can count how many artists have been created" do
-      expect(Artist.count).to eq(1)
-    end
-
-    it "can find an artist by name" do
-      artist.name = 'Miley Cyrus'
-      expect(Artist.find_by_name('Miley Cyrus')).to eq(artist)
-    end
+    
 
     it "can reset the artists that have been created" do
       Artist.reset_all
